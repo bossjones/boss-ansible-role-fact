@@ -1,2 +1,32 @@
 ---
-# defaults file for boss-ansible-fact
+
+# Enable or disable support for boss facts.
+boss__fact__enabled: True
+# Path to the file which holds the public parameters.
+boss__fact__public_path: '/etc/ansible/boss__fact.ini'
+
+# Path to the file which holds the private parameters.
+boss__fact__private_path: '/etc/ansible/boss__fact_priv.ini'
+
+# The system group which will be able to access the private facts file. It will
+# be automatically created if it doesn't exist.
+boss__fact__private_group: 'root'
+
+# The file permissions of the private Ansible facts file.
+boss__fact__private_mode: '0640'
+
+# List of INI configuration files to read by the fact script.
+boss__fact__config_files:
+  - '{{ boss__fact__public_path }}'
+  - '{{ boss__fact__private_path }}'
+
+# Name of the "default" INI section, not added in a subkey.
+boss__fact__default_section: 'default'
+
+# Name of the "public" section available by default, stored in the public fact
+# file.
+boss__fact__public_section: 'global'
+
+# Name of the "private" section available by default, stored in the private
+# fact file.
+boss__fact__private_section: 'secret'
