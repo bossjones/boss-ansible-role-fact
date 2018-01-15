@@ -1,5 +1,5 @@
 {
-  "restructuredtext.confPath": "/Users/malcolm/dev/bossjones/bossjones-playbook-suite/boss-ansible-fact",
+  "restructuredtext.confPath": "${workspaceFolder}",
   "python.pythonPath": "${workspaceFolder}/venv/bin/python",
   "files.exclude": {
     ".vagrant": "explorerExcludedFiles",
